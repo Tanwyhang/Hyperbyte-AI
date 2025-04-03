@@ -1,53 +1,115 @@
-### **🔥 AI Medical Screener – Full MVP Blueprint 🔥**  
-A **minimum viable product (MVP) version** of an **AI-powered health screening app**, optimized for fast development, real-world impact, and hackathon success.  
+### **🔥 AI Medical Screener – Full MVP Blueprint with UI Flow 🔥**  
+A **minimalist, AI-powered health screening mobile app**, designed for fast development, real-world impact, and hackathon success.  
 
 ---
 
 ## **1️⃣ Core Features (MVP Scope)**  
 
-### **✅ AI Image Recognition (Core Feature)**  
-- Users **upload an image** of a skin condition, rash, or eye issue.  
-- AI model (TensorFlow Lite) **analyzes and classifies** the condition.  
-- **Output:**  
-  - **Possible Diagnosis (e.g., eczema, infection, irritation).**  
-  - **Risk Level (Low, Moderate, High Concern).**  
-  - **Basic Treatment Tips (Hydration, Creams, Doctor Visit Advice).**  
-
-### **✅ AI Chatbot for Symptom Analysis**  
-- Users describe **additional symptoms** (pain, redness, fever).  
-- Chatbot **asks relevant follow-up questions** (via text input).  
-- Uses **predefined logic + basic NLP** to provide advice.  
-
-### **✅ Nearby Clinic Finder**  
-- Uses **Google Maps API** to find **nearby clinics**.  
-- Displays **clinic name, distance, contact info**.  
-- Basic **manual appointment booking request** (user submits request form).  
-
-### **✅ User Health Log & Secure Storage**  
-- Saves **previous AI analyses & chatbot responses** for later reference.  
-- Uses **SQLite (local database) or Expo SecureStore** to store data securely.  
+✔ **AI Image Recognition for Medical Screening** – Users upload images of skin conditions for instant AI analysis.  
+✔ **AI Chatbot for Symptom Analysis** – Conversational AI provides health recommendations.  
+✔ **Nearby Clinic Finder** – Integrated with Google Maps to locate clinics.  
+✔ **User Health Log & Secure Storage** – Past AI analyses and chatbot insights are securely stored.  
 
 ---
 
-## **2️⃣ Tech Stack (Optimized for MVP)**  
+## **2️⃣ Optimized Tech Stack (Minimal & Efficient)**  
 
 ### **📱 Frontend (Expo + React Native)**  
-✅ **Expo (Managed Workflow)** – Instant mobile development & testing.  
-✅ **React Native + React Navigation** – Smooth screen transitions.  
-✅ **Tailwind React Native** – Lightweight, utility-based styling.  
+✅ **Expo (Managed Workflow)** – Fast mobile development.  
+✅ **React Native + React Navigation** – Smooth navigation.  
+✅ **Tailwind React Native** – Minimalist utility-based styling.  
+✅ **Lucide Icons** – Modern, lightweight icons for UI.  
 
 ### **🖥️ Backend (FastAPI + AI Processing)**  
-✅ **FastAPI** – High-performance API backend for AI processing.  
-✅ **TensorFlow Lite** – Optimized for **on-device image recognition**.  
-✅ **SQLite (Embedded Database)** – Simple local storage for user history.  
+✅ **FastAPI** – Handles AI processing requests.  
+✅ **TensorFlow Lite** – AI-powered image recognition.  
+✅ **SQLite / Expo SecureStore** – Local storage for user health logs.  
 
 ### **🌍 Essential Integrations**  
-✅ **Google Maps API** – Finds clinics & provides location services.  
-✅ **Expo SecureStore** – Safely stores user medical logs (encrypted).  
+✅ **Google Maps API** – Clinic location services.  
 
 ---
 
-## **3️⃣ MVP Development Roadmap**  
+## **3️⃣ Minimalist UI Flow & Placement**  
+
+### **🏠 Home Screen (Main Hub)**  
+📌 **Navigation:** Tabs (Home, Chatbot, Clinics, Profile)  
+
+🔹 **Header:**  
+- **App Title:** "AI Medical Screener" (Left-aligned)  
+- **Settings Icon (⚙)** (Top-right corner)  
+
+🔹 **Main UI Elements:**  
+- **Upload Image (🖼️) [Lucide: "image"]** – Large button, centered.  
+- **Describe Symptoms (💬) [Lucide: "message-circle"]** – Below image upload button.  
+- **Find Clinics (📍) [Lucide: "map-pin"]** – Third button, centered.  
+- **View History (📑) [Lucide: "clock"]** – Bottom link for past AI logs.  
+
+---
+
+### **📸 AI Image Analysis Screen**  
+📌 **Function:** Users upload an image for AI diagnosis.  
+
+🔹 **Header:**  
+- **Back Icon (←) [Lucide: "arrow-left"]**  
+- **Title:** "AI Medical Scan" (Center)  
+
+🔹 **Main UI Elements:**  
+- **Image Preview Box (🖼️) [Lucide: "image"]**  
+- **Analyze Button (🔍) [Lucide: "scan"]** – Below image preview.  
+- **AI Diagnosis Display:**  
+  - **Possible Condition Name** (Large text)  
+  - **Risk Level (🟢🟡🔴 Indicator)**  
+  - **Basic Advice (Text Box)**  
+
+- **Save to History (💾) [Lucide: "save"]** – Bottom-right corner.  
+
+---
+
+### **💬 AI Chatbot Screen**  
+📌 **Function:** Users describe symptoms, get AI advice.  
+
+🔹 **Header:**  
+- **Back Icon (←) [Lucide: "arrow-left"]**  
+- **Title:** "Health Assistant" (Center)  
+
+🔹 **Chat Interface:**  
+- **User Input Box (📝) [Lucide: "edit"]** – Bottom text field.  
+- **Send Button (📩) [Lucide: "send"]** – Right of input.  
+- **AI Responses (Chat Bubbles)** – Minimalist message UI.  
+
+---
+
+### **📍 Clinic Finder Screen**  
+📌 **Function:** Shows nearby clinics with contact info.  
+
+🔹 **Header:**  
+- **Back Icon (←) [Lucide: "arrow-left"]**  
+- **Title:** "Nearby Clinics" (Center)  
+
+🔹 **Main UI Elements:**  
+- **Map View (🗺️) [Lucide: "map"]** – Full-width interactive map.  
+- **Clinic List Below:**  
+  - **Clinic Name (Bold Text)**  
+  - **Distance & Address (Small Text)**  
+  - **Call Button (📞) [Lucide: "phone"]** – Right-aligned.  
+
+---
+
+### **📑 Health Log Screen**  
+📌 **Function:** View past AI analyses & chatbot responses.  
+
+🔹 **Header:**  
+- **Back Icon (←) [Lucide: "arrow-left"]**  
+- **Title:** "Health History" (Center)  
+
+🔹 **Main UI Elements:**  
+- **Past AI Diagnoses (List View)**  
+- **Tap to Expand Details (📄) [Lucide: "file-text"]**  
+
+---
+
+## **4️⃣ MVP App Flow & Development Phases**  
 
 | **Phase**  | **Tasks**  | **Time Frame**  |  
 |------------|------------|------------|  
@@ -59,41 +121,11 @@ A **minimum viable product (MVP) version** of an **AI-powered health screening a
 
 ---
 
-## **4️⃣ MVP App Flow & Screens**  
+## **5️⃣ Why This MVP Works**  
 
-### **🏠 1. Home Screen**  
-- **"Upload Image" Button** → Opens camera/gallery for AI analysis.  
-- **"Describe Symptoms" Button** → Opens chatbot interaction.  
-- **"Find Nearby Clinics" Button** → Opens Google Maps view.  
-
-### **📸 2. AI Image Analysis Screen**  
-- Users **upload an image** of a skin condition.  
-- AI model **analyzes and returns** classification + basic advice.  
-- Option to **log this analysis** for future reference.  
-
-### **💬 3. AI Chatbot Screen**  
-- User **inputs symptoms** (via text).  
-- Chatbot **asks follow-up questions** based on symptom logic.  
-- Provides **final health recommendation** (e.g., home treatment, visit clinic).  
-
-### **📍 4. Clinic Finder Screen**  
-- Displays **map & list of nearby clinics** using Google Maps API.  
-- Users can **view details & manually book appointments**.  
-
-### **📝 5. User Health Log Screen**  
-- Shows **past AI analyses & chatbot responses**.  
-- Data stored securely in **SQLite or SecureStore**.  
+🚀 **Minimalist UI + Modern Lucide Icons** – Clean, distraction-free UX.  
+📱 **Expo-Powered for Speed** – Instant mobile development.  
+🔥 **AI-Driven & Lightweight** – TensorFlow Lite for efficient on-device processing.  
+💡 **Privacy-Focused** – No cloud storage, secure local health logs.  
 
 ---
-
-## **5️⃣ Why This MVP Works for Hackathons**  
-
-🚀 **Fast to Build** – Uses **Expo for instant testing & deployment**.  
-📱 **Lightweight & Efficient** – Minimal dependencies, **TensorFlow Lite for speed**.  
-🔥 **Real-World Impact** – AI-driven **health screening + clinic guidance**.  
-💡 **Privacy-Focused** – No cloud storage, **local-only health data**.  
-
----
-
-## **Next Steps?**  
-Would you like a **UI wireframe or starter code template**? 🚀
