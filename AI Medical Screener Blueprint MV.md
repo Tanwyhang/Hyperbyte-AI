@@ -1,64 +1,99 @@
-🔥 Expo-Powered Hackathon App Blueprint
-1. Core Principles
-✔ Mobile-First with Expo – Rapid development without native dependencies.
-✔ Simplicity & Feasibility – Focus on a single, impactful problem.
-✔ User-Centric Design – Intuitive UI and smooth UX.
-✔ Engagement & Retention – Gamification and community features.
+### **🔥 AI Medical Screener – Full MVP Blueprint 🔥**  
+A **minimum viable product (MVP) version** of an **AI-powered health screening app**, optimized for fast development, real-world impact, and hackathon success.  
 
-2. Tech Stack Selection (Expo-Centric Approach)
-Frontend (React Native with Expo)
-✅ Expo (Managed Workflow) – Easy setup, fast testing, and deployment.
-✅ React Native Paper / MUI – Pre-styled UI components.
-✅ Tailwind React Native – Utility-first styling (for consistency).
-✅ React Navigation – Smooth navigation with stack/tabs/drawer layouts.
-✅ Reanimated & Gesture Handler – Performance-optimized animations.
-✅ React Query / Async Storage – Efficient data caching and offline support.
+---
 
-Backend (FastAPI + JSON-Based API)
-✅ FastAPI – Lightweight, high-performance backend.
-✅ Uvicorn – ASGI server for handling requests.
-✅ JSON Storage (Local-first API) – Simple, fast data management.
-✅ SQLite (Optional for Persistency) – Lightweight embedded DB.
-✅ Firebase (Optional for Authentication & Realtime Data) – Easy auth integration.
+## **1️⃣ Core Features (MVP Scope)**  
 
-Other Essential Tools
-✅ Expo Go (Testing on Devices) – Instant app previews.
-✅ Expo EAS Build (Production Builds) – Deploy to App Store & Play Store.
-✅ GitHub + Expo GitHub Actions (CI/CD) – Automate deployment.
-✅ Vercel / Railway (Backend Hosting) – Free-tier backend hosting.
+### **✅ AI Image Recognition (Core Feature)**  
+- Users **upload an image** of a skin condition, rash, or eye issue.  
+- AI model (TensorFlow Lite) **analyzes and classifies** the condition.  
+- **Output:**  
+  - **Possible Diagnosis (e.g., eczema, infection, irritation).**  
+  - **Risk Level (Low, Moderate, High Concern).**  
+  - **Basic Treatment Tips (Hydration, Creams, Doctor Visit Advice).**  
 
-3. App Structure & Development Flow
-The app consists of three core pillars to fit any hackathon theme.
+### **✅ AI Chatbot for Symptom Analysis**  
+- Users describe **additional symptoms** (pain, redness, fever).  
+- Chatbot **asks relevant follow-up questions** (via text input).  
+- Uses **predefined logic + basic NLP** to provide advice.  
 
-Pillar	Purpose	Implementation
-Learn	Provides educational content or insights.	Fetches from JSON API or Firebase Firestore.
-Act	Tracks actions, habits, or progress.	Stores user logs in Async Storage or SQLite.
-Engage	Allows community interaction.	(Optional) Firebase Realtime DB for chat/forums.
-Development Phases (Expo-Focused Time Allocation)
-⌛ 0-3 Hours → Ideation, Wireframing, Expo Setup
-⌛ 3-6 Hours → Build Core UI (Screens, Navigation, Theming)
-⌛ 6-12 Hours → Implement API + Data Storage (Async Storage / SQLite)
-⌛ 12-18 Hours → Test Core Features, Add Enhancements
-⌛ 18-24 Hours → Debugging, Final Polish, Presentation Prep
+### **✅ Nearby Clinic Finder**  
+- Uses **Google Maps API** to find **nearby clinics**.  
+- Displays **clinic name, distance, contact info**.  
+- Basic **manual appointment booking request** (user submits request form).  
 
-4. Backend & API Flow
-Data Storage: Uses JSON for quick local reads/writes or SQLite for persistency.
-API Endpoints:
-GET /content → Fetch articles, guides, or tasks.
-POST /track → Store user progress.
-GET /leaderboard → (Optional) Show community rankings.
-Security: Use Firebase Auth or Expo SecureStore for authentication.
-5. Adaptability Across Topics
-This Expo-powered structure is flexible for different themes:
+### **✅ User Health Log & Secure Storage**  
+- Saves **previous AI analyses & chatbot responses** for later reference.  
+- Uses **SQLite (local database) or Expo SecureStore** to store data securely.  
 
-Topic	Feature Adaptations
-🌱 Environment	Carbon footprint tracker, eco-friendly challenges.
-🧠 Mental Health	Meditation tracker, AI-based mood analysis.
-🎓 Education	Interactive courses, AI-powered learning suggestions.
-✅ Productivity	Habit tracker, Pomodoro timer, task automation.
-🏋️ Fitness & Health	Step counter, workout planner, diet logs.
-6. Why This Expo Blueprint Works
-🚀 Fastest Mobile Development – Instant previewing and no native setup hassle.
-📱 Cross-Platform Ready – Runs on both iOS and Android with a single codebase.
-🎯 Offline-First Approach – Works even without internet (Async Storage).
-🔥 Rapid Deployment with EAS – Publish to stores in record time.
+---
+
+## **2️⃣ Tech Stack (Optimized for MVP)**  
+
+### **📱 Frontend (Expo + React Native)**  
+✅ **Expo (Managed Workflow)** – Instant mobile development & testing.  
+✅ **React Native + React Navigation** – Smooth screen transitions.  
+✅ **Tailwind React Native** – Lightweight, utility-based styling.  
+
+### **🖥️ Backend (FastAPI + AI Processing)**  
+✅ **FastAPI** – High-performance API backend for AI processing.  
+✅ **TensorFlow Lite** – Optimized for **on-device image recognition**.  
+✅ **SQLite (Embedded Database)** – Simple local storage for user history.  
+
+### **🌍 Essential Integrations**  
+✅ **Google Maps API** – Finds clinics & provides location services.  
+✅ **Expo SecureStore** – Safely stores user medical logs (encrypted).  
+
+---
+
+## **3️⃣ MVP Development Roadmap**  
+
+| **Phase**  | **Tasks**  | **Time Frame**  |  
+|------------|------------|------------|  
+| **Setup & UI**  | Install Expo, create core screens (Home, Upload, Chat, Clinics).  | **0-3 hrs**  |  
+| **AI Model Integration**  | Connect FastAPI backend & TensorFlow Lite for image processing.  | **3-8 hrs**  |  
+| **Chatbot Implementation**  | Basic symptom analysis logic (text-based).  | **8-12 hrs**  |  
+| **Clinic Finder & Storage**  | Google Maps API + local storage for health logs.  | **12-18 hrs**  |  
+| **Testing & Final MVP Polish**  | Debugging, optimize performance, Expo EAS deployment.  | **18-24 hrs**  |  
+
+---
+
+## **4️⃣ MVP App Flow & Screens**  
+
+### **🏠 1. Home Screen**  
+- **"Upload Image" Button** → Opens camera/gallery for AI analysis.  
+- **"Describe Symptoms" Button** → Opens chatbot interaction.  
+- **"Find Nearby Clinics" Button** → Opens Google Maps view.  
+
+### **📸 2. AI Image Analysis Screen**  
+- Users **upload an image** of a skin condition.  
+- AI model **analyzes and returns** classification + basic advice.  
+- Option to **log this analysis** for future reference.  
+
+### **💬 3. AI Chatbot Screen**  
+- User **inputs symptoms** (via text).  
+- Chatbot **asks follow-up questions** based on symptom logic.  
+- Provides **final health recommendation** (e.g., home treatment, visit clinic).  
+
+### **📍 4. Clinic Finder Screen**  
+- Displays **map & list of nearby clinics** using Google Maps API.  
+- Users can **view details & manually book appointments**.  
+
+### **📝 5. User Health Log Screen**  
+- Shows **past AI analyses & chatbot responses**.  
+- Data stored securely in **SQLite or SecureStore**.  
+
+---
+
+## **5️⃣ Why This MVP Works for Hackathons**  
+
+🚀 **Fast to Build** – Uses **Expo for instant testing & deployment**.  
+📱 **Lightweight & Efficient** – Minimal dependencies, **TensorFlow Lite for speed**.  
+🔥 **Real-World Impact** – AI-driven **health screening + clinic guidance**.  
+💡 **Privacy-Focused** – No cloud storage, **local-only health data**.  
+
+---
+
+## **Next Steps?**  
+Would you like a **UI wireframe or starter code template**? 🚀
