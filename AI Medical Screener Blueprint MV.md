@@ -1,131 +1,112 @@
-### **🔥 AI Medical Screener – Full MVP Blueprint with UI Flow 🔥**  
-A **minimalist, AI-powered health screening mobile app**, designed for fast development, real-world impact, and hackathon success.  
+# **🔥 AI Medical Screener – Expo iOS App MVP (Local Storage Only) 🔥**  
+A **minimalist AI-powered health app** built using **Expo + React Native**, focusing on **local storage** for user data and featuring **AI image analysis, chatbot, and clinic locator**.  
 
 ---
 
-## **1️⃣ Core Features (MVP Scope)**  
+## **1️⃣ Core Features (MVP, Local-Only)**  
 
-✔ **AI Image Recognition for Medical Screening** – Users upload images of skin conditions for instant AI analysis.  
-✔ **AI Chatbot for Symptom Analysis** – Conversational AI provides health recommendations.  
-✔ **Nearby Clinic Finder** – Integrated with Google Maps to locate clinics.  
-✔ **User Health Log & Secure Storage** – Past AI analyses and chatbot insights are securely stored.  
+✔ **AI Image Recognition for Health Screening** (Scan & analyze skin/eye conditions).  
+✔ **AI Chatbot for Symptom Analysis** (Conversational health guidance).  
+✔ **Nearby Clinic Finder** (Map-based clinic locator).  
+✔ **Local Health Log Storage** (Store past AI analyses and chatbot logs on the device).  
 
 ---
 
-## **2️⃣ Optimized Tech Stack (Minimal & Efficient)**  
+## **2️⃣ Optimized Tech Stack (Expo + Local Storage)**  
 
-### **📱 Frontend (Expo + React Native)**  
-✅ **Expo (Managed Workflow)** – Fast mobile development.  
-✅ **React Native + React Navigation** – Smooth navigation.  
-✅ **Tailwind React Native** – Minimalist utility-based styling.  
-✅ **Lucide Icons** – Modern, lightweight icons for UI.  
+### **📱 Frontend (Expo + React Native for iOS)**  
+✅ **Expo (Managed Workflow)** – Fast development and deployment.  
+✅ **React Navigation (Bottom Tabs)** – iOS-style tab navigation.  
+✅ **Tailwind CSS** – Minimalist, utility-first styling.  
+✅ **Lucide Icons** – Simple, lightweight icons for a clean UI.  
 
-### **🖥️ Backend (FastAPI + AI Processing)**  
-✅ **FastAPI** – Handles AI processing requests.  
-✅ **TensorFlow Lite** – AI-powered image recognition.  
-✅ **SQLite / Expo SecureStore** – Local storage for user health logs.  
+### **🖥️ Backend**  
+- **No External Backend** – The app will store all data locally using **Expo SecureStore** or **AsyncStorage**.  
+- **TensorFlow Lite** – For local on-device AI image analysis.  
 
 ### **🌍 Essential Integrations**  
-✅ **Google Maps API** – Clinic location services.  
+✅ **Google Maps API** – To locate nearby clinics.  
 
 ---
 
-## **3️⃣ Minimalist UI Flow & Placement**  
+## **3️⃣ UI & App Flow (Tab-Based with Centered Scan Button)**  
 
-### **🏠 Home Screen (Main Hub)**  
-📌 **Navigation:** Tabs (Home, Chatbot, Clinics, Profile)  
-
-🔹 **Header:**  
-- **App Title:** "AI Medical Screener" (Left-aligned)  
-- **Settings Icon (⚙)** (Top-right corner)  
-
-🔹 **Main UI Elements:**  
-- **Upload Image (🖼️) [Lucide: "image"]** – Large button, centered.  
-- **Describe Symptoms (💬) [Lucide: "message-circle"]** – Below image upload button.  
-- **Find Clinics (📍) [Lucide: "map-pin"]** – Third button, centered.  
-- **View History (📑) [Lucide: "clock"]** – Bottom link for past AI logs.  
+### **📌 Bottom Tab Navigation (iOS Style, 4 Tabs)**  
+| **Tab**       | **Lucide Icon**      | **Function** |
+|--------------|---------------------|-------------|
+| 🏠 **Home**  | `home`               | Access AI chatbot and health tips. |
+| 💬 **Chatbot** | `message-circle`   | Symptom-based AI chatbot assistant. |
+| 🔍 **Scan (Center Button)** | `scan` | Opens AI image analysis for screening. |
+| 📍 **Clinics** | `map-pin` | Shows nearby clinics using Google Maps. |
+| 📝 **History** | `clock` | View past AI scans & chatbot logs. |
 
 ---
 
-### **📸 AI Image Analysis Screen**  
-📌 **Function:** Users upload an image for AI diagnosis.  
-
-🔹 **Header:**  
-- **Back Icon (←) [Lucide: "arrow-left"]**  
-- **Title:** "AI Medical Scan" (Center)  
-
+### **🏠 1. Home Screen (Tab: Home)**  
+📌 **Function:** Quick access to chatbot and basic health tips.  
 🔹 **Main UI Elements:**  
-- **Image Preview Box (🖼️) [Lucide: "image"]**  
-- **Analyze Button (🔍) [Lucide: "scan"]** – Below image preview.  
-- **AI Diagnosis Display:**  
-  - **Possible Condition Name** (Large text)  
+- **"Describe Symptoms" Button (💬) [Lucide: "message-circle"]**  
+- **"Find Clinics" Button (📍) [Lucide: "map-pin"]**  
+- **"View History" Link (📑) [Lucide: "clock"]**  
+
+---
+
+### **🔍 2. AI Scan Screen (Floating Center Button on Tab Bar)**  
+📌 **Function:** Core AI image analysis for health screening.  
+🔹 **Main UI Elements:**  
+- **Centered Camera Button (📸) [Lucide: "scan"]** – Tapping opens camera/gallery for scanning.  
+- **AI Diagnosis Output:**  
+  - **Condition Name (Large Text)**  
   - **Risk Level (🟢🟡🔴 Indicator)**  
   - **Basic Advice (Text Box)**  
-
-- **Save to History (💾) [Lucide: "save"]** – Bottom-right corner.  
-
----
-
-### **💬 AI Chatbot Screen**  
-📌 **Function:** Users describe symptoms, get AI advice.  
-
-🔹 **Header:**  
-- **Back Icon (←) [Lucide: "arrow-left"]**  
-- **Title:** "Health Assistant" (Center)  
-
-🔹 **Chat Interface:**  
-- **User Input Box (📝) [Lucide: "edit"]** – Bottom text field.  
-- **Send Button (📩) [Lucide: "send"]** – Right of input.  
-- **AI Responses (Chat Bubbles)** – Minimalist message UI.  
+- **Save to History (💾) [Lucide: "save"]** – Save analysis result locally for review later.  
 
 ---
 
-### **📍 Clinic Finder Screen**  
-📌 **Function:** Shows nearby clinics with contact info.  
+### **💬 3. AI Chatbot Screen (Tab: Chatbot)**  
+📌 **Function:** Text-based symptom checker for health guidance.  
+🔹 **Main UI Elements:**  
+- **User Input Box (📝) [Lucide: "edit"]** – Text box for users to describe symptoms.  
+- **AI Response Bubbles (Text)** – Chat-based interaction with AI.  
 
-🔹 **Header:**  
-- **Back Icon (←) [Lucide: "arrow-left"]**  
-- **Title:** "Nearby Clinics" (Center)  
+---
 
+### **📍 4. Clinic Finder Screen (Tab: Clinics)**  
+📌 **Function:** Locate nearby clinics using Google Maps.  
 🔹 **Main UI Elements:**  
 - **Map View (🗺️) [Lucide: "map"]** – Full-width interactive map.  
 - **Clinic List Below:**  
   - **Clinic Name (Bold Text)**  
   - **Distance & Address (Small Text)**  
-  - **Call Button (📞) [Lucide: "phone"]** – Right-aligned.  
+  - **Call Button (📞) [Lucide: "phone"]** – To directly call the clinic.  
 
 ---
 
-### **📑 Health Log Screen**  
-📌 **Function:** View past AI analyses & chatbot responses.  
-
-🔹 **Header:**  
-- **Back Icon (←) [Lucide: "arrow-left"]**  
-- **Title:** "Health History" (Center)  
-
+### **📝 5. Health Log Screen (Tab: History)**  
+📌 **Function:** View past AI scans & chatbot responses.  
 🔹 **Main UI Elements:**  
-- **Past AI Diagnoses (List View)**  
-- **Tap to Expand Details (📄) [Lucide: "file-text"]**  
+- **List of Previous AI Scans** – Displays saved health scans.  
+- **Tap to Expand Details** – Each entry can be expanded for further details, including date and diagnosis.  
 
 ---
 
-## **4️⃣ MVP App Flow & Development Phases**  
+## **4️⃣ Development Phases for iOS App (Local Storage Only)**
 
 | **Phase**  | **Tasks**  | **Time Frame**  |  
-|------------|------------|------------|  
-| **Setup & UI**  | Install Expo, create core screens (Home, Upload, Chat, Clinics).  | **0-3 hrs**  |  
-| **AI Model Integration**  | Connect FastAPI backend & TensorFlow Lite for image processing.  | **3-8 hrs**  |  
-| **Chatbot Implementation**  | Basic symptom analysis logic (text-based).  | **8-12 hrs**  |  
-| **Clinic Finder & Storage**  | Google Maps API + local storage for health logs.  | **12-18 hrs**  |  
-| **Testing & Final MVP Polish**  | Debugging, optimize performance, Expo EAS deployment.  | **18-24 hrs**  |  
+|------------|------------|-----------------|  
+| **Setup & UI**  | Initialize Expo, create bottom tab navigation.  | **0-3 hrs**  |  
+| **Image Recognition**  | Integrate TensorFlow Lite model for local image analysis.  | **3-6 hrs**  |  
+| **Chatbot Integration**  | Implement simple symptom-based logic with AI responses.  | **6-9 hrs**  |  
+| **Google Maps API**  | Add nearby clinic locator using Google Maps API.  | **9-12 hrs**  |  
+| **Local Storage**  | Use **SecureStore** or **AsyncStorage** to save health data locally.  | **12-18 hrs**  |  
+| **Testing & Deployment**  | Expo testing, debugging, and deployment using EAS for iOS.  | **18-24 hrs**  |  
 
 ---
 
-## **5️⃣ Why This MVP Works**  
+## **5️⃣ Why This MVP Works (iOS, Local Storage)**  
 
-🚀 **Minimalist UI + Modern Lucide Icons** – Clean, distraction-free UX.  
-📱 **Expo-Powered for Speed** – Instant mobile development.  
-🔥 **AI-Driven & Lightweight** – TensorFlow Lite for efficient on-device processing.  
-💡 **Privacy-Focused** – No cloud storage, secure local health logs.  
-
----
+🚀 **Fast Development** – Expo and React Native ensure rapid mobile development.  
+📱 **Native iOS Feel** – Seamless tab navigation and minimal interface.  
+🔥 **Privacy-First** – All data is stored locally using **SecureStore** or **AsyncStorage**, ensuring privacy.  
+🔍 **Efficient AI Processing** – On-device TensorFlow Lite for fast AI image analysis.  
+📍 **User-Centric** – Focused on delivering quick and easy access to health resources and logs.  
