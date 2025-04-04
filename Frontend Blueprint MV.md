@@ -1,5 +1,5 @@
 # 🧪 **AI Medical Screener – Frontend Blueprint (Centered Scan UX)**  
-**Expo | nativewind | shadcn-inspired | Mobile-first**
+**Expo | shadcn-inspired | Mobile-first**
 
 ---
 
