@@ -1,7 +1,3 @@
-Perfect — let’s refine that to a **circle-centered scan tab** layout — exactly like a **floating action button in the middle**, flanked by the two other tabs on the left and right. Here's the updated and detailed **frontend UX structure** for your **AI Medical Screener App**:
-
----
-
 # 🧪 **AI Medical Screener – Frontend Blueprint (Centered Scan UX)**  
 **Expo | nativewind | shadcn-inspired | Mobile-first**
 
@@ -85,5 +81,3 @@ Perfect — let’s refine that to a **circle-centered scan tab** layout — exa
 - 📱 **All optimized for one-hand use & fast reflex navigation**
 
 ---
-
-Let me know if you'd like a **figma-style UI layout**, **component folder structure**, or an animation suggestion for the floating button next!
